@@ -11,14 +11,12 @@ class scraper():
     def __init__(self,position,location):
         self.position = position
         self.location = location
+        self.url = url(position,location)
 
-    url = url()
-
-    linkedin_url = url.indeed_url
-    indeed_url = url.indeed_url
-    naukri_url = url.naukri_url
-    shine_url = url.shine_url
+    driver = webdriver.Chrome(executable_path='./chromedriver.exe')
 
     def linkedin_data(self):
 
-         
+        self.driver.get(self.url.linkdin_url())
+
+        return 'ok'
