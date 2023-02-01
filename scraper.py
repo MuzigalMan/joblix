@@ -2,6 +2,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 import pandas as pd
+from bs4 import BeautifulSoup
 
 from urls import url
 
@@ -19,4 +20,7 @@ class scraper():
 
         self.driver.get(self.url.linkdin_url())
 
-        return 'ok'
+
+s = scraper('SDE', 'Hyderabad')
+s.linkedin_data()
+        
