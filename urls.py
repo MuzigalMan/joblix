@@ -84,5 +84,5 @@ class url():
         link = f"https://www.shine.com/job-search/{position_lower}-jobs-in-{place_lower}?q={position}%2C&loc={place}"
         return link
 
-u = url('SDE','Hyderabad')
-u.linkdin_url()
+# u = url('Project Managment',"Canada")
+# u.linkdin_url()
