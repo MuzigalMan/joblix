@@ -14,10 +14,10 @@ def getData(job,location):
 
 def main(data) : 
     #get data
-    get_job = list(data.items())[0]
-    job = get_job[1]
-    get_location = list(data.items())[1]
-    location = get_location[1]
+    # get_job = list(data.items())[0]
+    job = data['job']
+    # get_location = list(data.items())[1]
+    location = data['location']
 
     #resume parser
     user = parser()

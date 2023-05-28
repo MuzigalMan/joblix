@@ -1,5 +1,3 @@
-import { csrf_token } from "{{ url_for('static', filename='js/events.js') }}";
-
 document.getElementById('myForm').addEventListener('submit', (event) => {
   event.preventDefault(); // prevent the default form submission behavior
 
@@ -20,6 +18,10 @@ document.getElementById('myForm').addEventListener('submit', (event) => {
       'X-CSRFToken': csrf_token ,
     },
   })
-  .then((res) => res.json())
+  .then((res) => {
+    // Hide the loading symbol after the API response is received
+    loadingScreen.style.display = 'none';
+    return res.json();
+  })
   .then(error => console.error(error));
 });
